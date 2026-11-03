@@ -6,14 +6,21 @@
 ## Ruta de trabajo
 
 - [ ] Ruta A · Figma (enlace con permiso de lectura: …)
-- [ ] Ruta B · VS Code (diseño directamente en `guia.html`)
+- [x] Ruta B · VS Code (diseño directamente en `guia.html`)
 
 ## 1. Color (RA1 · CE b)
 
 - Tono de acento de la ficha y cómo has obtenido la escala (50 … 950):
+  - Tono de 172°, establecido por la ficha del Caso 10. La escala se ha generado mediante OKLCH, manteniendo un croma de 0,12 y variando la luminosidad para obtener seis niveles (50, 300, 400, 700, 800 y 950). Los colores se han convertido a hexadecimal para incorporarlos a los tokens Sass.
+
 - Por qué el acento de texto/fondo es el 700 en claro y el 400 en oscuro (o el que elijas):
+  - Se utilizan los niveles 700 en tema claro y 400 en tema oscuro como color de acento principal. Ambos superan el mínimo WCAG de 4,5:1 sobre sus respectivas superficies.
+
 - Tokens semánticos añadidos y para qué:
+  - `error` y `error-tenue` para representar errores de validación y sus fondos asociados. Se ha creado una familia de cuatro colores mediante OKLCH.
+
 - Pares de contraste añadidos a `$pares-contraste`:
+  - `error` sobre `error-tenue` y `error` sobre `superficie`, ambos con un mínimo de 4,5:1.
 
 ## 2. Tipografía (RA1 · CE b)
 
