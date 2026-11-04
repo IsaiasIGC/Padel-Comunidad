@@ -251,13 +251,116 @@
 }
 @layer components {
   .turno {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
     display: grid;
     gap: var(--espacio-3xs);
     padding: var(--espacio-s);
-    border: 1px solid var(--color-borde);
+    border: 1px solid var(--color-borde-control);
     border-radius: var(--radio-tarjeta);
     background-color: var(--color-superficie);
     cursor: pointer;
+  }
+  .turno:has(:checked) {
+    border: 2px solid var(--color-acento);
+    background-color: var(--color-acento-tenue);
+  }
+  .turno:has(:disabled) {
+    border: 2px dashed var(--color-borde-control);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-suave);
+    cursor: not-allowed;
+  }
+  .turno:has(:focus-visible) {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+  }
+  .turno__control {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .turno__hora {
+    font-weight: 700;
+  }
+}
+@layer components {
+  .invitados {
+    border: 0;
+    padding: 0;
+  }
+  .invitados legend {
+    margin-block-end: var(--espacio-xs);
+    font-weight: 700;
+  }
+  .invitados__opciones {
+    display: flex;
+    gap: var(--espacio-2xs);
+  }
+  .invitados__opcion {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
+    display: grid;
+    flex: 1;
+    place-items: center;
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    cursor: pointer;
+  }
+  .invitados__opcion:has(:checked) {
+    border: 2px solid var(--color-acento);
+    background-color: var(--color-acento-tenue);
+    font-weight: 700;
+  }
+  .invitados__opcion:has(:disabled) {
+    border-style: dashed;
+    color: var(--color-texto-suave);
+    cursor: not-allowed;
+  }
+  .invitados__opcion:has(:focus-visible) {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+  }
+  .invitados__control {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .invitados__valor {
+    font-weight: 700;
+  }
+}
+@layer components {
+  .aviso {
+    display: grid;
+    gap: var(--espacio-2xs);
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-acento);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-acento-tenue);
+  }
+  .aviso__titulo {
+    margin: 0;
+    font-size: var(--paso-1);
+  }
+  .aviso__importe {
+    margin: 0;
+    font-size: var(--paso-3);
+    font-weight: 700;
+  }
+  .aviso__telefono {
+    margin: 0;
+  }
+  .aviso__concepto {
+    margin: 0;
+    font-family: var(--fuente-mono);
   }
 }
 @layer components {
