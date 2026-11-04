@@ -54,4 +54,82 @@
   // TODO Fase 1: redefine al menos estos elementos con tokens
   //   p (medida máxima de línea en ch), small, strong,
   //   ul/ol, hr, table/th/td, fieldset/legend, label, input, select
+  // Párrafos y texto
+  p {
+    max-inline-size: 65ch;
+    text-wrap: pretty;
+  }
+
+  small {
+    color: var(--color-texto-suave);
+    font-size: var(--paso-menos-1);
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  // Listas
+  ul,
+  ol {
+    padding-inline-start: var(--espacio-m);
+  }
+
+  li {
+    margin-block-end: var(--espacio-3xs);
+  }
+
+  // Separadores
+  hr {
+    border: 0;
+    border-block-start: 1px solid var(--color-borde);
+    margin-block: var(--espacio-m);
+  }
+
+  // Tablas
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: var(--espacio-2xs);
+    border-block-end: 1px solid var(--color-borde);
+    text-align: start;
+  }
+
+  th.numero,
+  td.numero {
+    text-align: end;
+  }
+
+  // Formularios
+  fieldset {
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    padding: var(--espacio-s);
+  }
+
+  legend {
+    padding-inline: var(--espacio-2xs);
+    font-weight: 700;
+  }
+
+  label {
+    display: block;
+    margin-block-end: var(--espacio-3xs);
+  }
+
+  input:not(:where([type="radio"], [type="checkbox"])),
+  select {
+    @include objetivo-tactil;
+
+    inline-size: 100%;
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    padding-inline: var(--espacio-2xs);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+  }
 }

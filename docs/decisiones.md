@@ -25,8 +25,11 @@
 ## 2. Tipografía (RA1 · CE b)
 
 - Familia elegida y por qué (rendimiento, legibilidad, licencia):
+  - Se ha elegido `system-ui` como fuente principal porque utiliza la tipografía nativa del sistema operativo, ofrece buena legibilidad y no necesita descargar archivos externos ni gestionar licencias de fuentes web.
 - Base y razón en móvil y escritorio. Por qué esas:
+  - En móvil se utiliza una base de 16 px con una razón modular de 1,2, mientras que en escritorio se utiliza una base de 18 px con una razón de 1,25. Se ha elegido una escala más moderada en pantallas pequeñas y algo mayor en escritorio para mantener una jerarquía visual equilibrada.
 - Medida de línea (`max-inline-size` del párrafo en `ch`):
+  - Se establece un máximo de 65ch para limitar la longitud de los párrafos y facilitar su lectura.
 
 ## 3. Espaciado y forma
 

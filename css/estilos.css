@@ -134,6 +134,67 @@
     font-family: var(--fuente-mono);
     font-size: 0.9em;
   }
+  p {
+    max-inline-size: 65ch;
+    text-wrap: pretty;
+  }
+  small {
+    color: var(--color-texto-suave);
+    font-size: var(--paso-menos-1);
+  }
+  strong {
+    font-weight: 700;
+  }
+  ul,
+  ol {
+    padding-inline-start: var(--espacio-m);
+  }
+  li {
+    margin-block-end: var(--espacio-3xs);
+  }
+  hr {
+    border: 0;
+    border-block-start: 1px solid var(--color-borde);
+    margin-block: var(--espacio-m);
+  }
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: var(--espacio-2xs);
+    border-block-end: 1px solid var(--color-borde);
+    text-align: start;
+  }
+  th.numero,
+  td.numero {
+    text-align: end;
+  }
+  fieldset {
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    padding: var(--espacio-s);
+  }
+  legend {
+    padding-inline: var(--espacio-2xs);
+    font-weight: 700;
+  }
+  label {
+    display: block;
+    margin-block-end: var(--espacio-3xs);
+  }
+  input:not(:where([type=radio], [type=checkbox])),
+  select {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
+    inline-size: 100%;
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    padding-inline: var(--espacio-2xs);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+  }
 }
 @layer layout {
   .contenedor {
